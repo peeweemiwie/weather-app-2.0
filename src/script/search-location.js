@@ -9,7 +9,7 @@ let displayInfo = (response) => {
 	let data = response.data;
 	let searchInput = document.querySelector('#search-input');
 	let city = data.name;
-
+	console.log(data);
 	//display in html
 	document.querySelector('#location-container').innerHTML = city;
 	document.querySelector('#current-temperature').innerHTML = Math.round(
@@ -21,6 +21,8 @@ let displayInfo = (response) => {
 	document.querySelector('#humidity').innerHTML = data.main.humidity;
 	document.querySelector('#wind').innerHTML = Math.round(data.wind.speed);
 	document.querySelector('#current-weather').innerHTML = data.weather[0].main;
+	document.querySelector('#current-weather-details').innerHTML =
+		data.weather[0].description;
 	// when user clicks 'current location' while weather from other city is displayed, input value is blank by default, hence this will display current location
 	if (searchInput.value.toLowerCase() !== city.toLowerCase()) {
 		searchInput.value = city;

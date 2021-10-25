@@ -38,10 +38,11 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 .we-weather-details .we-list-group .list-group-item {
 	background-color: transparent;
 	border: 0;
-	font-size: 16px;
+	font-size: $font-size-s;
 	padding: 0 3px;
 	text-align: center;
 }
@@ -101,6 +102,11 @@ body {
 
 .current-weather {
 	font-size: $font-size-reg;
+	text-transform: capitalize;
+}
+.current-weather-details {
+	color: $gray;
+	font-size: $font-size-s;
 }
 // imperial / metric
 #container-current-weather[data-unit='metric'] .imperial,
