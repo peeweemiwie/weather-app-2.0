@@ -9,7 +9,7 @@ let displayInfo = (response) => {
 	let data = response.data;
 	let searchInput = document.querySelector('#search-input');
 	let city = data.name;
-	console.log(data);
+
 	//display in html
 	document.querySelector('#location-container').innerHTML = city;
 	document.querySelector('#current-temperature').innerHTML = Math.round(
