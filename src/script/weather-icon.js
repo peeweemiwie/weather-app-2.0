@@ -1,6 +1,7 @@
 let containerCurrentWeather = document.querySelector(
 	'#container-current-weather',
 );
+
 let weatherIcon = (icon, description) => {
 	let iconWeather = document.querySelector('#icon-weather');
 	iconWeather.setAttribute(
@@ -13,9 +14,11 @@ let weatherIcon = (icon, description) => {
 	let dark = () => {
 		containerCurrentWeather.dataset.theme = 'dark';
 	};
+
 	let light = () => {
 		containerCurrentWeather.dataset.theme = 'light';
 	};
+
 	let index = icon.indexOf('d');
 	index > -1 ? light() : dark();
 };
