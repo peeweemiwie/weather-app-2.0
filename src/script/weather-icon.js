@@ -1,10 +1,14 @@
+let containerCurrentWeather = document.querySelector(
+	'#container-current-weather',
+);
 let weatherIcon = (icon, description) => {
-	let img = `<img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="icon: ${description}" class="icon-weather">`;
-	let containerIcon = document.querySelector('#container-icon');
-	let containerCurrentWeather = document.querySelector(
-		'#container-current-weather',
+	let iconWeather = document.querySelector('#icon-weather');
+	iconWeather.setAttribute(
+		'src',
+		`http://openweathermap.org/img/wn/${icon}@2x.png`,
 	);
-	containerIcon.innerHTML = img;
+	iconWeather.setAttribute('alt', description);
+
 	// Set theme color - dark || light. Icons from has 2 types. Ex: 02d for day 02n for night.
 	let dark = () => {
 		containerCurrentWeather.dataset.theme = 'dark';
