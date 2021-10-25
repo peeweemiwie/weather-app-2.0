@@ -1,0 +1,36 @@
+/* colors */
+$primary: #22b2da;
+$success: #22da93;
+$warning: #f0b03a;
+$danger: #f23557;
+$light: #eee;
+$dark: #0c1425;
+$white: #fff;
+$gray: #414141;
+$light-gray: lighten($gray, 60%);
+$text: $dark;
+$day: #fffacd;
+$night: #000065;
+
+$font-size-xl: 60px;
+$font-size-l: 50px;
+$font-size-m: 40px;
+$font-size-reg: 24px;
+$font-size-s: 16px;
+
+$gradient-day: radial-gradient(
+	circle at 100% 10%,
+	rgb(255, 241, 188) 0%,
+	rgb(137, 210, 253) 50%
+);
+
+$gradient-night: linear-gradient(
+	45deg,
+	rgba(4, 0, 51, 0.95) 40%,
+	rgb(0, 55, 79) 60%,
+	rgb(9, 93, 134) 90%
+);
+
+@mixin border-bold($color) {
+	border: 3px solid $color;
+}

@@ -1,0 +1,22 @@
+/* prediction */
+.we-prediction .we-pred-temp .we-list-group-list {
+	text-align: center;
+}
+
+.we-prediction .we-pred-daily {
+	border-bottom: 1px solid #dee2e6;
+	margin: 0;
+	padding: 5px 0;
+}
+
+.we-prediction .we-pred-date {
+	padding: 0;
+}
+.we-prediction .we-pred-daily:last-child {
+	border-bottom: 0;
+}
+
+.we-pred-icons {
+	align-items: center;
+	display: flex;
+}

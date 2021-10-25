@@ -1,0 +1,22 @@
+/* overwrite font awesome */
+.fas {
+	font-size: 150px;
+}
+.we-prediction .fas {
+	font-size: 40px;
+}
+.fa-snowflake,
+.fa-smog,
+.fa-cloud-showers-heavy,
+.fa-cloud-rain,
+.fa-cloud {
+	color: gray;
+}
+.fa-cloud-moon,
+.fa-cloud-sun {
+	color: rgb(180, 128, 32);
+}
+.fa-moon,
+.fa-sun {
+	color: orange;
+}
