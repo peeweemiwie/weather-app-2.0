@@ -107,3 +107,11 @@ body {
 #container-current-weather[data-unit='imperial'] .metric {
 	display: none;
 }
+
+.footer {
+	font-size: $font-size-xs;
+	color: $gray;
+	a {
+		color: $gray;
+	}
+}

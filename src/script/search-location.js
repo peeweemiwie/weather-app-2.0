@@ -58,12 +58,22 @@ let errorHandler = (message, element) => {
 	};
 	element.addEventListener('focus', removeWarning);
 };
+
 let validateInput = (event) => {
 	event.preventDefault();
 	let target = event.target;
 	let unit = target.getAttribute('data-unit');
 	let searchInput = document.querySelector('#search-input');
 	let searchInputValue = searchInput.value;
+
+	if (target.value === 'C') {
+		document.querySelector('#unit-metric').disabled = true;
+		document.querySelector('#unit-imperial').disabled = false;
+	} else {
+		document.querySelector('#unit-metric').disabled = false;
+		document.querySelector('#unit-imperial').disabled = true;
+	}
+
 	if (searchInputValue) {
 		sendData();
 		sendData.createUrlFromSearchValue(searchInputValue, unit);
@@ -86,9 +96,11 @@ document
 	});
 
 document.querySelector('#btn-search').addEventListener('click', validateInput);
+
 document
 	.querySelector('#unit-imperial')
 	.addEventListener('click', validateInput);
+
 document.querySelector('#unit-metric').addEventListener('click', validateInput);
 
 sendData();
