@@ -11,6 +11,7 @@ body {
 	&[data-theme='dark'] {
 		background: $gradient-night;
 		color: $light;
+		.current-weather-details,
 		li {
 			color: $light;
 		}
